@@ -32,8 +32,8 @@ const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
 
     const [anchorEl, setAnchorEl] = useState(null);
     const isOpen = Boolean(anchorEl);
-    const handleClick = (event) => setAnchorEl(event.currentTarget);
-    const handleClose = () => setAnchorEl(null);
+    const clickHandler = (event) => setAnchorEl(event.currentTarget);
+    const closeHandler = () => setAnchorEl(null);
 
     return (
         <AppBar
@@ -55,7 +55,7 @@ const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
                         gap="3rem"
                         p="0.1rem 1.5rem"
                     >
-                        <InputBase placeholder="Search..." />
+                        <InputBase placeholder="Search....." />
                         <IconButton>
                             <Search />
                         </IconButton>
@@ -81,7 +81,7 @@ const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
 
                     <FlexBetween>
                         <Button
-                            onClick={handleClick}
+                            onClick={clickHandler}
                             sx={{
                                 display: 'flex',
                                 justifyContent: 'space-between',
@@ -122,10 +122,10 @@ const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
                         <Menu
                             anchorEl={anchorEl}
                             open={isOpen}
-                            onClose={handleClose}
+                            onClose={closeHandler}
                             anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
                         >
-                            <MenuItem onClick={handleClose}>Log Out</MenuItem>
+                            <MenuItem onClick={closeHandler}>Log Out</MenuItem>
                             {!isNonMobile && (
                                 <MenuItem sx={{ justifyContent: 'center' }}>
                                     <>
