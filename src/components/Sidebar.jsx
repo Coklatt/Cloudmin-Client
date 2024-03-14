@@ -47,13 +47,13 @@ const Sidebar = ({ user, drawerWidth, isSidebarOpen, setIsSidebarOpen, isNonMobi
                     sx={{
                         width: drawerWidth,
                         '& ::-webkit-scrollbar': {
-                            width: '13px',
+                            width: '14px',
                         },
                         '& ::-webkit-scrollbar-track': {
                             backgroundColor: 'transparent',
                         },
                         '& ::-webkit-scrollbar-thumb': {
-                            backgroundColor: 'rgba(168, 188, 191, 0.5)',
+                            backgroundColor: 'rgba(168, 187, 191, 0.5)',
                             borderRadius: '30px',
                             // border: '6px solid transparent',
                             backgroundClip: 'padding-box',
@@ -61,7 +61,7 @@ const Sidebar = ({ user, drawerWidth, isSidebarOpen, setIsSidebarOpen, isNonMobi
                             // borderLeft: '4px white solid',
                         },
                         '& ::-webkit-scrollbar-thumb:hover': {
-                            backgroundColor: 'rgba(214, 222, 222, 0.8)',
+                            backgroundColor: 'rgba(214, 222, 225, 0.8)',
                         },
                         '& .MuiDrawer-paper': {
                             color: theme.palette.secondary[200],
@@ -80,9 +80,9 @@ const Sidebar = ({ user, drawerWidth, isSidebarOpen, setIsSidebarOpen, isNonMobi
                     <Box width="100%">
                         <Box m="1.5rem 2rem 2rem 3rem">
                             <FlexBetween color={theme.palette.secondary.main}>
-                                <Box display="flex" alignItems="center" gap="0.6rem">
+                                <Box display="flex" alignItems="center" gap="0.5rem">
                                     <Typography variant="h4" fontWeight="bold">
-                                        Cloud-in
+                                        Cloudmin
                                     </Typography>
                                 </Box>
                                 {!isNonMobile && (
